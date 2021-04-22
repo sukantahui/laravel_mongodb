@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post("cars",[\App\Http\Controllers\CarController::class, 'store']);
+Route::patch("cars",[\App\Http\Controllers\CarController::class, 'update']);

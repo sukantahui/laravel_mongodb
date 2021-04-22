@@ -35,11 +35,14 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        $car = new Car();
-        $car->carcompany = $request->get('carcompany');
-        $car->model = $request->get('model');
-        $car->price = $request->get('price');
-        $car->save();
+//        $car = new Car();
+//        $car->carcompany = $request->get('carcompany');
+//        $car->model = $request->get('model');
+//        $car->price = $request->get('price');
+//        $car->save();
+//        return $car;
+
+        $car = Car::create($request->all());
         return $car;
     }
 
@@ -72,9 +75,9 @@ class CarController extends Controller
      * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Car $car)
+    public function update(Request $request)
     {
-        //
+
     }
 
     /**
